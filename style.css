@@ -11,6 +11,11 @@
   position: relative;
 }
 
+#world-map{
+    width: 100%;
+    height: auto;
+}
+
 .info-container {
   flex: 0.7;
 }
