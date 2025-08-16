@@ -6,7 +6,23 @@
         <link rel ="stylesheet" href="style.css">
     </head>
     <body>
-        <img src='https://i.postimg.cc/N0p8ZM0P/image.png' alt='world map' id="world-map"/>
+        <div class="container">
+  <div class="map-container">
+    <img src='https://i.postimg.cc/N0p8ZM0P/image.png' alt='World Map' id="world-map"/>
+    <map name="continents">
+      <area id="north-america" shape="rect" coords="50,50,150,150" alt="North America" onclick="showContinent('north-america')">
+    </map>
+  </div>
+
+  <div class="info-container">
+    <div class="stats-card" id="north-america-card">
+      <h2>North America</h2>
+      <p>Total population: 617.9 million</p>
+      <p>Countries: 23</p>
+    </div>
+  </div>
+</div>
+
         <script src="earthstats.js"></script>
     </body>
 </html>
