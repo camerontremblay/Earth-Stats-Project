@@ -10,6 +10,7 @@ const antarcticaArea = document.getElementById('antarctica');
 //charts
 const areaCanvas = document.getElementById('areaBarChart');
 const populationCanvas = document.getElementById('populationBarChart');
+const highPopulationDensityCanvas = document.getElementById('highPopulationDensityBarChart');
 
 //interactive map
 northAmericaArea.addEventListener('click', () => {
@@ -106,7 +107,7 @@ const areaBarChart = new Chart(areaCanvas, {
             }
         }
     }
-})
+});
 
 const populationBarChart = new Chart(populationCanvas, {
     type: 'bar',
@@ -145,4 +146,45 @@ const populationBarChart = new Chart(populationCanvas, {
             }
         }
     }
-})
+});
+
+const highPopulationDensityBarChart = new Chart(populationCanvas, {
+    type: 'bar',
+    data:{
+        labels: ['Monaco', 'Singapore', 'Bahrain', 'Vatican City', 'Maldives'],
+        datasets: [{
+            label: 'Population Density In People Per Square Mile In Thousands',
+            data: [49, 21, 5.2, 4.7, 4.6],
+            backgroundColor: [
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        scales: {
+            x: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Largest Countries By Population'
+            }
+        }
+    }
+});
