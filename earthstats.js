@@ -148,7 +148,7 @@ const populationBarChart = new Chart(populationCanvas, {
     }
 });
 
-const highPopulationDensityBarChart = new Chart(populationCanvas, {
+const highPopulationDensityBarChart = new Chart(highPopulationDensityCanvas, {
     type: 'bar',
     data:{
         labels: ['Monaco', 'Singapore', 'Bahrain', 'Vatican City', 'Maldives'],
