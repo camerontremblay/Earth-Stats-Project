@@ -1,3 +1,4 @@
+//interactive map
 const northAmericaArea = document.getElementById('north-america');
 const southAmericaArea = document.getElementById('south-america');
 const europeArea = document.getElementById('europe');
@@ -5,8 +6,12 @@ const africaArea = document.getElementById('africa');
 const asiaArea = document.getElementById('asia');
 const australiaArea = document.getElementById('australia');
 const antarcticaArea = document.getElementById('antarctica');
-const areaCanvas = document.getElementById('areaBarChart');
 
+//charts
+const areaCanvas = document.getElementById('areaBarChart');
+const populationCanvas = document.getElementById('populationBarChart');
+
+//interactive map
 northAmericaArea.addEventListener('click', () => {
   const cards = document.querySelectorAll('.stats-card');
   cards.forEach(card => card.classList.remove('active'));
@@ -63,6 +68,7 @@ antarcticaArea.addEventListener('click', () => {
   naCard.classList.add('active');
 });
 
+//Charts
 const areaBarChart = new Chart(areaCanvas, {
     type: 'bar',
     data:{
@@ -71,10 +77,10 @@ const areaBarChart = new Chart(areaCanvas, {
             label: 'Area In Million Square Miles',
             data: [6.6, 3.9, 3.8, 3.7, 3.3],
             backgroundColor: [
-                'rgba(28, 0, 189, 1)',
-                'rgba(189, 0, 50, 1)',
-                'rgba(28, 0, 189, 1)',
-                'rgba(189, 0, 50, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
                 'rgba(2, 126, 67, 1)',
             ],
             borderColor: [
@@ -84,7 +90,7 @@ const areaBarChart = new Chart(areaCanvas, {
                 'rgba(0, 0, 0, 1)',
                 'rgba(0, 0, 0, 1)',
             ],
-            borderWidth: 1
+            borderWidth: 3
         }]
     },
     options: {
@@ -97,6 +103,45 @@ const areaBarChart = new Chart(areaCanvas, {
             title: {
                 display: true,
                 text: 'Largest Countries By Size'
+            }
+        }
+    }
+})
+
+const populationBarChart = new Chart(populationCanvas, {
+    type: 'bar',
+    data:{
+        labels: ['China', 'India', 'United States', 'Indonesia', 'Pakistan'],
+        datasets: [{
+            label: 'Population In Hundred Million People',
+            data: [14.1, 14.1, 3.4, 2.8, 2.5],
+            backgroundColor: [
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Largest Countries By Population'
             }
         }
     }
