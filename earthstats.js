@@ -5,6 +5,7 @@ const africaArea = document.getElementById('africa');
 const asiaArea = document.getElementById('asia');
 const australiaArea = document.getElementById('australia');
 const antarcticaArea = document.getElementById('antarctica');
+const areaCanvas = document.getElementById('areaBarChart');
 
 northAmericaArea.addEventListener('click', () => {
   const cards = document.querySelectorAll('.stats-card');
@@ -62,3 +63,41 @@ antarcticaArea.addEventListener('click', () => {
   naCard.classList.add('active');
 });
 
+const areaBarChart = new Chart(areaCanvas, {
+    type: 'bar',
+    data:{
+        labels: ['Russia', 'Canada', 'United States', 'China', 'Brazil'],
+        datasets: [{
+            label: 'Area In Million Square Miles',
+            data: [6.6, 3.9, 3.8, 3.7, 3.3],
+            backgroundColor: [
+                'rgba(28, 0, 189, 1)',
+                'rgba(189, 0, 50, 1)',
+                'rgba(28, 0, 189, 1)',
+                'rgba(189, 0, 50, 1)',
+                'rgba(2, 126, 67, 1)',
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Largest Countries By Size'
+            }
+        }
+    }
+})
