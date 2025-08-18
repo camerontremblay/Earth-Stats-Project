@@ -11,6 +11,7 @@ const antarcticaArea = document.getElementById('antarctica');
 const areaCanvas = document.getElementById('areaBarChart');
 const populationCanvas = document.getElementById('populationBarChart');
 const highPopulationDensityCanvas = document.getElementById('highPopulationDensityBarChart');
+const oldestPopulationCanvas = document.getElementById('oldestPopulationBarChart');
 
 //interactive map
 northAmericaArea.addEventListener('click', () => {
@@ -183,7 +184,48 @@ const highPopulationDensityBarChart = new Chart(highPopulationDensityCanvas, {
         plugins: {
             title: {
                 display: true,
-                text: 'Largest Countries By Population'
+                text: 'Countries With Highest Population Density'
+            }
+        }
+    }
+});
+
+const oldestPopulationBarChart = new Chart(oldestPopulationCanvas, {
+    type: 'bar',
+    data:{
+        labels: ['Monaco', 'Japan', 'Andorra', 'Italy', 'Germany'],
+        datasets: [{
+            label: 'Age Of Average Citizen',
+            data: [56.9, 49.9, 48.8, 48.4, 46.8],
+            backgroundColor: [
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+                'rgba(2, 126, 67, 1)',
+            ],
+            borderColor: [
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+                'rgba(0, 0, 0, 1)',
+            ],
+            borderWidth: 3
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+        responsive: true,
+        scales: {
+            x: {
+                beginAtZero: true
+            }
+        },
+        plugins: {
+            title: {
+                display: true,
+                text: 'Oldest Countries By Average Civilian Age'
             }
         }
     }
