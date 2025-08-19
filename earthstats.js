@@ -326,6 +326,7 @@ new Chart(timeline, {
     scales: {
       x: {
         stacked: true,
+        max: currentYear,
         title: {
           display: true,
           text: 'Year'
