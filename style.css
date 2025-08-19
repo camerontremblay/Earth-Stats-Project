@@ -33,8 +33,11 @@
 }
 
 .flip-card{
-  width: 50%;
+  width: 40%;
   display: block;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 8px;
 }
 
 .flip-card-front{
