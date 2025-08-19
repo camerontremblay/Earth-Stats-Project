@@ -31,9 +31,24 @@
   padding: 10px;
   border-radius: 8px;
 }
-.overlay {
-  position: absolute;
-  border: 2px solid red;
-  background-color: rgba(255,0,0,0.2);
-  pointer-events: none;
+
+.flip-card{
+  width: 50%;
+  display: block;
+}
+
+.flip-card-front{
+  display: block;
+}
+
+.flip-card-back{
+  display: none;
+}
+
+.flip-card:hover .flip-card-front{
+  display: none;
+}
+
+.flip-card:hover .flip-card-back{
+  display: block;
 }
