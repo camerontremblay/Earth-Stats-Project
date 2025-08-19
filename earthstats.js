@@ -230,3 +230,113 @@ const oldestPopulationBarChart = new Chart(oldestPopulationCanvas, {
         }
     }
 });
+
+
+//timeline
+
+const currentYear = new Date().getFullYear();
+
+const labels = [
+  'Roman Empire',
+  'Byzantine Empire',
+  'Mongol Empire',
+  'Ottoman Empire',
+  'Mughal Empire',
+  'Spanish Empire',
+  'Portuguese Empire',
+  'British Empire',
+  'French Empire',
+  'United States',
+  'Canada',
+  'Brazil',
+  'Germany',
+  'India',
+  'China',
+  'Russia',
+  'Japan'
+];
+
+const starts = [
+  0,    // Roman
+  330,  // Byzantine
+  1206, // Mongol
+  1299, // Ottoman
+  1526, // Mughal
+  1492, // Spanish
+  1415, // Portuguese
+  1583, // British
+  1534, // French
+  1776, // USA
+  1867, // Canada
+  1822, // Brazil
+  1871, // Germany
+  1947, // India
+  1949, // China
+  1991, // Russia
+  1868  // Japan
+];
+
+const ends = [
+  476,  // Roman
+  1453, // Byzantine
+  1368, // Mongol
+  1922, // Ottoman
+  1857, // Mughal
+  1898, // Spanish
+  1999, // Portuguese
+  1997, // British
+  1980, // French
+  currentYear, // USA
+  currentYear, // Canada
+  currentYear, // Brazil
+  currentYear, // Germany
+  currentYear, // India
+  currentYear, // China
+  currentYear, // Russia
+  currentYear  // Japan
+];
+
+
+const durations = ends.map((end, i) => end - starts[i]);
+
+const timeline = document.getElementById('timeline');
+
+new Chart(timeline, {
+  type: 'bar',
+  data: {
+    labels,
+    datasets: [
+      {
+        label: 'Start',
+        data: starts,
+        backgroundColor: 'rgba(0,0,0,0)',
+        stack: 'timeline'
+      },
+      {
+        label: 'Duration',
+        data: durations,
+        backgroundColor: 'rgba(2, 126, 67, 1)',
+        stack: 'timeline'
+      }
+    ]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true,
+    scales: {
+      x: {
+        stacked: true,
+        title: {
+          display: true,
+          text: 'Year'
+        }
+      },
+      y: {
+        stacked: true
+      }
+    },
+    plugins: {
+      legend: { display: false }
+    }
+  }
+});
