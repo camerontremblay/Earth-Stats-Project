@@ -55,3 +55,27 @@
 .flip-card:hover .flip-card-back{
   display: block;
 }
+
+#ocean-scroll{
+  position: relative;
+  height: 7214px;
+  width: 100vw;
+  background: linear-gradient(to bottom, #00c3ff, #000022);
+  overflow-x: hidden;
+}
+
+.zone, .landmark{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: yellow;
+}
+
+.line{
+  border-bottom: 2px solid yellow;
+  width: 100%;
+}
+
+.line-text{
+  margin-top: 5px;
+}
