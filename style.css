@@ -65,6 +65,7 @@ html, body{
 
 #ocean-scroll{
   position: relative;
+  height: 7214px;
   width: 100vw;
   background: linear-gradient(to bottom, #00c3ff, #000022);
   overflow-x: hidden;
