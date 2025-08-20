@@ -69,12 +69,12 @@ html, body{
   width: 100vw;
   background: linear-gradient(to bottom, #00c3ff, #000022);
   overflow-x: hidden;
+  overflow-y: hidden;
   margin-left: 0px;
   margin-right: 0px;
   padding-left: 0px;
   padding-right: 0px;
   margin-top: 30px;
-  margin-bottom: 30px;
 }
 
 .zone, .landmark{
