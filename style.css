@@ -1,3 +1,7 @@
+*{
+  box-sizing: border-box;
+}
+
 html, body{
   margin: 0;
   padding: 0;
@@ -70,7 +74,7 @@ html, body{
   height: 7214px;
   width: 100vw;
   background: linear-gradient(to bottom, #00c3ff, #000022);
-  overflow-x: hidden;
+  overflow: visible;
   margin-left: 0px;
   margin-right: 0px;
   padding-left: 0px;
