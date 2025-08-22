@@ -73,13 +73,19 @@ antarcticaArea.addEventListener('click', () => {
 //Charts
 
 Chart.defaults.font.size = 14;
+Chart.defaults.font.family = "'Poppins', sans-serif";
+
 Chart.defaults.plugins.title.font.size = 20;
 Chart.defaults.plugins.legend.labels.font.size = 16;
-Chart.defaults.scales.ticks = {
-  font: {
-    size: 14
+
+Chart.defaults.scale = {
+  ticks: {
+    font: {
+      size: 14
+    }
   }
 };
+
 
 const areaBarChart = new Chart(areaCanvas, {
     type: 'bar',
