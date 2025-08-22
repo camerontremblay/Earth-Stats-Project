@@ -106,6 +106,6 @@ html, body{
 
 #timelinediv canvas{
   width: 100% !important;
-  height: 800px !important;
+  height: auto !important;
   display: block;
 }
