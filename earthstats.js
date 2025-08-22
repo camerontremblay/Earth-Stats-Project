@@ -12,6 +12,14 @@ const areaCanvas = document.getElementById('areaBarChart');
 const populationCanvas = document.getElementById('populationBarChart');
 const highPopulationDensityCanvas = document.getElementById('highPopulationDensityBarChart');
 const oldestPopulationCanvas = document.getElementById('oldestPopulationBarChart');
+Chart.defaults.font.size = 16;
+Chart.defaults.plugins.title.font.size = 20;
+Chart.defaults.plugins.legend.labels.font.size = 16;
+Chart.defaults.scales.ticks = {
+  font: {
+    size: 14
+  }
+};
 
 //interactive map
 northAmericaArea.addEventListener('click', () => {
