@@ -85,22 +85,14 @@ Chart.defaults.plugins.legend.labels.font = {
 };
 
 // Axes
-Chart.defaults.scales = {
-  x: {
-    ticks: {
-      font: {
-        size: 14
-      }
-    }
-  },
-  y: {
-    ticks: {
-      font: {
-        size: 14
-      }
+Chart.defaults.scale = {
+  ticks: {
+    font: {
+      size: 14
     }
   }
 };
+
 
 
 
