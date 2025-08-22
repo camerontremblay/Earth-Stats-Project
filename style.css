@@ -103,3 +103,9 @@ html, body{
   height: 400px !important;
   display: block;
 }
+
+#timelinediv canvas{
+  width: 100% !important;
+  height: 400px !important;
+  display: block;
+}
