@@ -91,3 +91,9 @@ html, body{
 .line-text{
   margin-top: 5px;
 }
+
+#barcharts{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
