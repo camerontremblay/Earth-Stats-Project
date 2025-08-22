@@ -100,7 +100,7 @@ html, body{
 
 #barcharts canvas{
   width: 100% !important;
-  height: 400px !important;
+  height: auto !important;
   display: block;
 }
 
