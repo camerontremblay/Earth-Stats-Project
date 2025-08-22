@@ -12,12 +12,12 @@ const areaCanvas = document.getElementById('areaBarChart');
 const populationCanvas = document.getElementById('populationBarChart');
 const highPopulationDensityCanvas = document.getElementById('highPopulationDensityBarChart');
 const oldestPopulationCanvas = document.getElementById('oldestPopulationBarChart');
-Chart.defaults.font.size = 16;
-Chart.defaults.plugins.title.font.size = 20;
-Chart.defaults.plugins.legend.labels.font.size = 16;
+Chart.defaults.font.size = 30;
+Chart.defaults.plugins.title.font.size = 30;
+Chart.defaults.plugins.legend.labels.font.size = 30;
 Chart.defaults.scales.ticks = {
   font: {
-    size: 14
+    size: 30
   }
 };
 
