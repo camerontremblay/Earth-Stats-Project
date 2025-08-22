@@ -97,8 +97,3 @@ html, body{
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-
-canvas{
-  width: 100%;
-  height: auto;
-}
