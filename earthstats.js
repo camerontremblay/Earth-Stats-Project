@@ -94,9 +94,9 @@ const areaBarChart = new Chart(areaCanvas, {
         datasets: [{
             label: 'Area In Million Square Miles',
             data: [6.6, 3.9, 3.8, 3.7, 3.3],
-            backgroundColor: '#3abd25',
+            backgroundColor: '#ffffff',
             borderColor: '#000000',
-            borderWidth: 3
+            borderWidth: 2
         }]
     },
     options: {
@@ -121,9 +121,9 @@ const populationBarChart = new Chart(populationCanvas, {
         datasets: [{
             label: 'Population In Hundred Million People',
             data: [14.1, 14.1, 3.4, 2.8, 2.5],
-            backgroundColor: '#3abd25',
+            backgroundColor: '#ffffff',
             borderColor: '#000000',
-            borderWidth: 3
+            borderWidth: 2
         }]
     },
     options: {
@@ -148,9 +148,9 @@ const highPopulationDensityBarChart = new Chart(highPopulationDensityCanvas, {
         datasets: [{
             label: 'Population Density In People Per Square Mile In Thousands',
             data: [49, 21, 5.2, 4.7, 4.6],
-            backgroundColor: '#3abd25',
+            backgroundColor: '#ffffff',
             borderColor: '#000000',
-            borderWidth: 3
+            borderWidth: 2
         }]
     },
     options: {
@@ -177,9 +177,9 @@ const oldestPopulationBarChart = new Chart(oldestPopulationCanvas, {
         datasets: [{
             label: 'Age Of Average Citizen',
             data: [56.9, 49.9, 48.8, 48.4, 46.8],
-            backgroundColor: '#3abd25',
+            backgroundColor: '#ffffff',
             borderColor: '#000000',
-            borderWidth: 3
+            borderWidth: 2
         }]
     },
     options: {
@@ -283,10 +283,10 @@ new Chart(timeline, {
       {
         label: 'Duration',
         data: durations,
-        backgroundColor: '#3abd25',
+        backgroundColor: '#ffffff',
         stack: 'timeline',
         borderColor: '#000000',
-        borderWidth: 3
+        borderWidth: 2
       }
     ]
   },
