@@ -94,20 +94,8 @@ const areaBarChart = new Chart(areaCanvas, {
         datasets: [{
             label: 'Area In Million Square Miles',
             data: [6.6, 3.9, 3.8, 3.7, 3.3],
-            backgroundColor: [
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-            ],
-            borderColor: [
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-            ],
+            backgroundColor: '#3abd25',
+            borderColor: '#000000',
             borderWidth: 3
         }]
     },
@@ -133,20 +121,8 @@ const populationBarChart = new Chart(populationCanvas, {
         datasets: [{
             label: 'Population In Hundred Million People',
             data: [14.1, 14.1, 3.4, 2.8, 2.5],
-            backgroundColor: [
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-            ],
-            borderColor: [
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-            ],
+            backgroundColor: '#3abd25',
+            borderColor: '#000000',
             borderWidth: 3
         }]
     },
@@ -172,20 +148,8 @@ const highPopulationDensityBarChart = new Chart(highPopulationDensityCanvas, {
         datasets: [{
             label: 'Population Density In People Per Square Mile In Thousands',
             data: [49, 21, 5.2, 4.7, 4.6],
-            backgroundColor: [
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-            ],
-            borderColor: [
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-            ],
+            backgroundColor: '#3abd25',
+            borderColor: '#000000',
             borderWidth: 3
         }]
     },
@@ -213,20 +177,8 @@ const oldestPopulationBarChart = new Chart(oldestPopulationCanvas, {
         datasets: [{
             label: 'Age Of Average Citizen',
             data: [56.9, 49.9, 48.8, 48.4, 46.8],
-            backgroundColor: [
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-                'rgba(2, 126, 67, 1)',
-            ],
-            borderColor: [
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-                'rgba(0, 0, 0, 1)',
-            ],
+            backgroundColor: '#3abd25',
+            borderColor: '#000000',
             borderWidth: 3
         }]
     },
@@ -331,8 +283,10 @@ new Chart(timeline, {
       {
         label: 'Duration',
         data: durations,
-        backgroundColor: 'rgba(2, 126, 67, 1)',
-        stack: 'timeline'
+        backgroundColor: '#3abd25',
+        stack: 'timeline',
+        borderColor: '#000000',
+        borderWidth: 3
       }
     ]
   },

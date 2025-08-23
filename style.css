@@ -59,6 +59,7 @@ html, body{
   display: block;
   font-size: 30px;
   text-align: center;
+  background-color: #57D6F0;
 }
 
 .flip-card-back{
@@ -72,13 +73,14 @@ html, body{
 .flip-card:hover .flip-card-back{
   display: block;
   padding-left: 3px;
+  background-color: #57D6F0;
 }
 
 #ocean-scroll{
   position: relative;
   height: 7214px;
   width: 100vw;
-  background: linear-gradient(to bottom, #00c3ff, #000022);
+  background: linear-gradient(to bottom, #57D6F0, #000022);
   overflow-x: hidden;
   margin-left: 0px;
   margin-right: 0px;
@@ -134,4 +136,8 @@ html, body{
 
 .section-title{
   text-align: center;
+}
+
+#charts{
+  background-color: #57D6F0;
 }
