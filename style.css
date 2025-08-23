@@ -53,6 +53,7 @@ html, body{
   display: block;
   border: 2px solid black;
   border-radius: 15px;
+  background-color: #57D6F0;
 }
 
 .flip-card-front{
