@@ -109,3 +109,11 @@ html, body{
   height: auto !important;
   display: block;
 }
+
+#page-title{
+  text-align: center;
+}
+
+#section-title{
+  text-align: center;
+}
