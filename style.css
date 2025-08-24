@@ -154,10 +154,12 @@ html, body{
 
 @media (max-width: 768px) {
   #barcharts {
+    display: grid;
     grid-template-columns: 1fr;
   }
 
   #cards {
+    display: grid;
     grid-template-columns: 1fr;
   }
 }
