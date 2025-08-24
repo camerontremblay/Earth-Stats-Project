@@ -20,7 +20,8 @@ html, body{
 
 #world-map{
     width: 100%;
-    max-height: 400px;
+    height: auto;
+    display: block;
 }
 
 .info-container {
