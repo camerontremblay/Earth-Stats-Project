@@ -151,3 +151,107 @@ html, body{
 #charts{
   background-color: #57D6F0;
 }
+
+/* ========== MOBILE RESPONSIVE ========== */
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  #page-title h1 {
+    font-size: 1.8rem;
+  }
+
+  #page-title h4,
+  .section-title h4 {
+    font-size: 1rem;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .map-container {
+    flex: 1;
+  }
+
+  #world-map {
+    width: 100%;
+    height: auto;
+  }
+
+  .info-container {
+    flex: 1;
+  }
+
+  .stats-card {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+
+  #barcharts {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  #barcharts canvas {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  #timelinediv {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  #timelinediv canvas {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .flip-card {
+    height: 180px;
+  }
+
+  .flip-card-front, .flip-card-back {
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  #ocean-scroll {
+    height: auto; 
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .zone, .landmark {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+
+  .line-text {
+    font-size: 0.85rem;
+    margin-top: 3px;
+    padding: 0 5px;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-title h4 {
+    font-size: 0.95rem;
+  }
+}
+
