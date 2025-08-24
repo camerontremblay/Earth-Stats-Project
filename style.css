@@ -82,6 +82,10 @@ html, body{
 
 .flip-card:hover .flip-card-back {
   bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
