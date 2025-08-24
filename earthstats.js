@@ -311,3 +311,13 @@ new Chart(timeline, {
     }
   }
 });
+
+
+
+
+window.onload = () => {
+  if (typeof imageMapResize === 'function') {
+    imageMapResize();
+  }
+};
+
