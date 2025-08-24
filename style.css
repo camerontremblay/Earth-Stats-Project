@@ -154,11 +154,12 @@ html, body{
 
 @media (max-width: 768px) {
 
-  /* Main container stacks vertically */
+  /* Stack container vertically */
   .container {
     flex-direction: column;
-    padding: 0 10px;
     gap: 15px;
+    padding: 0 10px;
+    max-width: 100%;
   }
 
   .map-container, .info-container {
@@ -166,56 +167,63 @@ html, body{
     flex: unset;
   }
 
-  /* Make stats cards taller and readable */
+  /* Stats cards */
   .stats-card {
-    font-size: 14px;
+    display: block;
+    min-height: 280px;
     padding: 15px;
-    min-height: 250px; /* enough room for all text */
+    font-size: 14px;
     overflow-wrap: break-word;
   }
 
-  /* Charts stack and stay readable */
+  /* Charts container stacking */
   #barcharts, #cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: 15px;
+    width: 100%;
   }
 
   #barcharts canvas,
   #timelinediv canvas {
     width: 100% !important;
-    min-height: 350px !important;
+    min-height: 350px !important; /* fix squish */
     height: auto !important;
   }
 
-  /* Flip cards (natural features) stack vertically and taller */
+  /* Reduce Chart.js font size for mobile */
+  .chartjs-render-monitor {
+    font-size: 12px !important;
+  }
+
+  /* Flip cards (natural features) stack vertically */
   .flip-card {
     width: 100%;
-    height: auto;
     min-height: 180px;
     padding: 10px;
     box-sizing: border-box;
   }
 
   .flip-card-front, .flip-card-back {
-    font-size: 16px;
+    font-size: 14px;
     padding: 10px;
   }
 
-  /* Ocean scroll adjustments */
+  /* Ocean scroll fixes */
   #ocean-scroll {
     width: 100%;
-    margin: 30px 0;
+    margin: 30px 0 0 0; /* no side margin */
     padding: 0;
-    min-height: 700px; /* keep gradient visible */
-    overflow: visible; /* normal scrolling */
+    overflow-x: hidden; /* remove side-scroll */
+    overflow-y: auto;
   }
 
+  /* Ensure absolute zones fit inside */
   .zone, .landmark {
+    position: absolute;
     width: 100%;
     left: 0;
     text-align: center;
-    margin: 0 auto;
   }
 
   .line {
@@ -228,10 +236,4 @@ html, body{
     padding: 0 5px;
   }
 
-  /* General spacing tweaks */
-  #cards {
-    gap: 15px;
-  }
-
 }
-
