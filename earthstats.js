@@ -312,12 +312,33 @@ new Chart(timeline, {
   }
 });
 
+function resizeMap() {
+  const img = document.getElementById("world-map");
+  const map = document.querySelector("map[name='continents']");
+  const areas = map.getElementsByTagName("area");
 
+  if (!img.naturalWidth || !img.naturalHeight) return;
 
+  const w = img.width;
+  const h = img.height;
+  const wRatio = w / img.naturalWidth;
+  const hRatio = h / img.naturalHeight;
 
-window.onload = () => {
-  if (typeof imageMapResize === 'function') {
-    imageMapResize();
+  for (let area of areas) {
+    // store the original coords the first time
+    if (!area.dataset.originalCoords) {
+      area.dataset.originalCoords = area.coords;
+    }
+
+    const originalCoords = area.dataset.originalCoords.split(",").map(Number);
+    const newCoords = originalCoords.map((c, i) =>
+      i % 2 === 0 ? c * wRatio : c * hRatio
+    );
+    area.coords = newCoords.join(",");
   }
-};
+}
+
+// run when image loads and when window resizes
+window.addEventListener("load", resizeMap);
+window.addEventListener("resize", resizeMap);
 
