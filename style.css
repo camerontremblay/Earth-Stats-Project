@@ -151,15 +151,3 @@ html, body{
 #charts{
   background-color: #57D6F0;
 }
-
-@media (max-width: 768px) {
-  #barcharts {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  #cards {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-}
