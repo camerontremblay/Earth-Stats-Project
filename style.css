@@ -152,106 +152,113 @@ html, body{
   background-color: #57D6F0;
 }
 
-/* ========== MOBILE RESPONSIVE ========== */
+/* Mobile styles - screens up to 768px */
 @media (max-width: 768px) {
 
-  body {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  #page-title h1 {
-    font-size: 1.8rem;
-  }
-
-  #page-title h4,
-  .section-title h4 {
-    font-size: 1rem;
-  }
-
+  /* --- Container --- */
   .container {
-    flex-direction: column;
-    gap: 20px;
+      flex-direction: column; /* stack map and stats */
+      gap: 15px;
+      padding: 0 10px;
   }
 
+  /* --- Map --- */
   .map-container {
-    flex: 1;
+      width: 100%;
+      max-height: none; /* remove fixed height */
   }
 
   #world-map {
-    width: 100%;
-    height: auto;
+      width: 100%;
+      height: auto;
+      max-height: none;
   }
 
+  /* --- Info cards --- */
   .info-container {
-    flex: 1;
+      width: 100%;
+      flex: unset;
   }
 
   .stats-card {
-    font-size: 0.9rem;
-    padding: 12px;
+      font-size: 14px;
+      padding: 10px 8px;
   }
 
+  /* --- Charts --- */
   #barcharts {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr; /* stack vertically */
+      gap: 20px;
+      padding: 0 10px;
   }
 
-  #barcharts canvas {
-    width: 100% !important;
-    height: 300px !important;
+  #barcharts canvas,
+  #timelinediv canvas {
+      width: 100% !important;
+      min-height: 350px; /* prevent squish */
+      height: auto !important;
+      display: block;
   }
 
   #timelinediv {
-    width: 100%;
-    padding: 0 5px;
+      padding: 0 10px;
   }
 
-  #timelinediv canvas {
-    width: 100% !important;
-    height: 300px !important;
-  }
-
+  /* --- Natural Features Cards --- */
   #cards {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+      display: grid;
+      grid-template-columns: 1fr; /* stack vertically */
+      gap: 15px;
+      padding: 0 10px;
   }
 
   .flip-card {
-    height: 180px;
+      width: 100%;
+      height: auto;
   }
 
   .flip-card-front, .flip-card-back {
-    font-size: 1rem;
-    padding: 8px;
+      font-size: 18px;
+      padding: 10px;
   }
 
+  /* --- Ocean Scroll --- */
   #ocean-scroll {
-    height: auto; 
-    min-height: 100vh;
-    overflow-y: auto;
-    overflow-x: hidden;
+      width: 100vw;
+      height: auto; /* let content dictate height */
+      overflow: visible; /* allow whole page scroll */
+      margin: 30px 0;
+      padding: 0;
   }
 
   .zone, .landmark {
-    width: 100%;
-    font-size: 0.85rem;
+      width: 100%;
+      text-align: center;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+  }
+
+  .line {
+      width: 90%; /* make line slightly shorter for mobile */
+      margin: 0 auto;
   }
 
   .line-text {
-    font-size: 0.85rem;
-    margin-top: 3px;
-    padding: 0 5px;
+      font-size: 12px;
+      margin-top: 5px;
+      padding: 0 5px;
   }
 
-  .section-title h2 {
-    font-size: 1.5rem;
+  /* --- General Page Fixes --- */
+  html, body {
+      overflow-x: hidden; /* remove horizontal scrollbar */
   }
 
-  .section-title h4 {
-    font-size: 0.95rem;
+  #page-title, .section-title {
+      font-size: 18px;
+      padding: 0 10px;
   }
+
 }
-
