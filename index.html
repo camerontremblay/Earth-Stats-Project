@@ -1,292 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Earth Stats</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel ="stylesheet" href="style.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    </head>
-    <body>
-      <header>
+  <head>
+    <title>Earth Stats</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
       <div id="page-title">
-      <h1 id="title">Earth Stats</h1>
-      <h4>Check out the different sections to learn about Earth</h4>
+        <h1 id="title">Earth Stats</h1>
+        <h4>Check out the different sections to learn about Earth</h4>
       </div>
-      </header>
-      <main>
+    </header>
+    <main>
       <div class="section-title">
-      <h2>Interactive Map</h2>
-      <h4>Click on each continent to learn more about it</h4>
+        <h2>Interactive Map</h2>
+        <h4>Click on each continent to learn more about it</h4>
       </div>
-<div class="container">
-  <div class="map-container">
-    <img src='https://i.postimg.cc/N0p8ZM0P/image.png' alt='World Map' id="world-map" usemap="#continents"/>
-    <map name="continents">
-      <area id="north-america" shape="rect" coords="40,20,240,200" alt="North America">
-      <area id="south-america" shape="rect" coords="210,210,305,320" alt="South America">
-      <area id="europe" shape="rect" coords="360,90,450,180" alt="Europe">
-      <area id="africa" shape="rect" coords="330,190,460,290" alt="Africa">
-      <area id="asia" shape="rect" coords="470,60,750,220" alt="Asia">
-      <area id="australia" shape="rect" coords="610,240,690,310" alt="Australia">
-      <area id="antarctica" shape="rect" coords="40,355,740,395" alt="Antarctica">
-    </map>
-  </div>
+      <div class="container">
+        <div class="map-container">
+          <img
+            src="https://i.postimg.cc/N0p8ZM0P/image.png"
+            alt="World Map"
+            id="world-map"
+            usemap="#continents"
+          />
+          <map name="continents">
+            <area
+              id="north-america"
+              shape="rect"
+              coords="40,20,240,200"
+              alt="North America"
+            />
+            <area
+              id="south-america"
+              shape="rect"
+              coords="210,210,305,320"
+              alt="South America"
+            />
+            <area
+              id="europe"
+              shape="rect"
+              coords="360,90,450,180"
+              alt="Europe"
+            />
+            <area
+              id="africa"
+              shape="rect"
+              coords="330,190,460,290"
+              alt="Africa"
+            />
+            <area id="asia" shape="rect" coords="470,60,750,220" alt="Asia" />
+            <area
+              id="australia"
+              shape="rect"
+              coords="610,240,690,310"
+              alt="Australia"
+            />
+            <area
+              id="antarctica"
+              shape="rect"
+              coords="40,355,740,395"
+              alt="Antarctica"
+            />
+          </map>
+        </div>
 
-  <div class="info-container">
-    <div class="stats-card" id="north-america-card">
-      <h2>North America</h2>
-      <p>Total population: 617.9 million people</p>
-      <p>Countries: 23 countries</p>
-      <p>Continent Size: 9.5 million square miles</p>
-      <p>Largest country by size: Canada - 3.9 million square miles</p>
-      <p>Largest country by population: United States - 330 million people</p>
-      <p>Largest city by size: Sitka, Alaska - 2870 square miles</p>
-      <p>Largest city by population: New York, New York - 8.3 million people</p>
-    </div>
-    <div class="stats-card" id="south-america-card">
-      <h2>South America</h2>
-      <p>Total population: 437 million people</p>
-      <p>Countries: 12 countries</p>
-      <p>Continent Size: 6.9 million square miles</p>
-      <p>Largest country by size: Brazil - 3.3 million square miles</p>
-      <p>Largest country by population: Brazil - 212 million people</p>
-      <p>Largest city by size: Buenos Aires, Argentina - 15,355 square miles</p>
-      <p>Largest city by population: Sao Paulo, Brazil - 22 million people</p>
-    </div>
-    <div class="stats-card" id="europe-card">
-      <h2>Europe</h2>
-      <p>Total population: 744.3 million people</p>
-      <p>Countries: 44 countries</p>
-      <p>Continent Size: 4.1 million square miles</p>
-      <p>Largest country by size: Ukraine - 233,062 square miles</p>
-      <p>Largest country by population: Germany - 84 million people</p>
-      <p>Largest city by size: Moscow, Russia - 2376 square miles</p>
-      <p>Largest city by population: Moscow, Russia - 12.7 million people</p>
-    </div>
-    <div class="stats-card" id="africa-card">
-      <h2>Africa</h2>
-      <p>Total population: 1.5 billion people</p>
-      <p>Countries: 54 countries</p>
-      <p>Continent Size: 11.7 million square miles</p>
-      <p>Largest country by size: Algeria - 919,600 square miles</p>
-      <p>Largest country by population: Nigeria - 237.5 million people</p>
-      <p>Largest city by size: Khartoum, Sudan - 8549 square miles</p>
-      <p>Largest city by population: Cairo, Egypt - 23 million people</p>
-    </div>
-    <div class="stats-card" id="asia-card">
-      <h2>Asia</h2>
-      <p>Total population: 4.8 billion people</p>
-      <p>Countries: 48 countries</p>
-      <p>Continent Size: 17.2 million square miles</p>
-      <p>Largest country by size: Russia - 6.6 million square miles</p>
-      <p>Largest country by population: China - 1.4 billion people</p>
-      <p>Largest city by size: Chongqing, China - 31,816 square miles</p>
-      <p>Largest city by population: Tokyo, Japan - 37 million people</p>
-    </div>
-    <div class="stats-card" id="australia-card">
-      <h2>Australia</h2>
-      <p>Total population: 27.2 million people</p>
-      <p>Countries: 1 country</p>
-      <p>Continent Size: 3 million square miles</p>
-      <p>Largest country by size: Australia - 3 million square miles</p>
-      <p>Largest country by population: Australia - 27.2 million people</p>
-      <p>Largest city by size: Brisbane, Australia - 6110 square miles</p>
-      <p>Largest city by population: Sydney, Australia - 5.6 million people</p>
-    </div>
-    <div class="stats-card" id="antarctica-card">
-      <h2>Antarctica</h2>
-      <p>Total population: 0 people</p>
-      <p>Countries: 0 countries</p>
-      <p>Continent Size: 5.3 million square miles</p>
-      <p>Largest country by size: N/A</p>
-      <p>Largest country by population: N/A</p>
-      <p>Largest city by size: N/A</p>
-      <p>Largest city by population: N/A</p>
-    </div>
-  </div>
-</div>
+        <div class="info-container">
+          <div class="stats-card" id="north-america-card">
+            <h2>North America</h2>
+            <p>Total population: 617.9 million people</p>
+            <p>Countries: 23 countries</p>
+            <p>Continent Size: 9.5 million square miles</p>
+            <p>Largest country by size: Canada - 3.9 million square miles</p>
+            <p>
+              Largest country by population: United States - 330 million people
+            </p>
+            <p>Largest city by size: Sitka, Alaska - 2870 square miles</p>
+            <p>
+              Largest city by population: New York, New York - 8.3 million
+              people
+            </p>
+          </div>
+          <div class="stats-card" id="south-america-card">
+            <h2>South America</h2>
+            <p>Total population: 437 million people</p>
+            <p>Countries: 12 countries</p>
+            <p>Continent Size: 6.9 million square miles</p>
+            <p>Largest country by size: Brazil - 3.3 million square miles</p>
+            <p>Largest country by population: Brazil - 212 million people</p>
+            <p>
+              Largest city by size: Buenos Aires, Argentina - 15,355 square
+              miles
+            </p>
+            <p>
+              Largest city by population: Sao Paulo, Brazil - 22 million people
+            </p>
+          </div>
+          <div class="stats-card" id="europe-card">
+            <h2>Europe</h2>
+            <p>Total population: 744.3 million people</p>
+            <p>Countries: 44 countries</p>
+            <p>Continent Size: 4.1 million square miles</p>
+            <p>Largest country by size: Ukraine - 233,062 square miles</p>
+            <p>Largest country by population: Germany - 84 million people</p>
+            <p>Largest city by size: Moscow, Russia - 2376 square miles</p>
+            <p>
+              Largest city by population: Moscow, Russia - 12.7 million people
+            </p>
+          </div>
+          <div class="stats-card" id="africa-card">
+            <h2>Africa</h2>
+            <p>Total population: 1.5 billion people</p>
+            <p>Countries: 54 countries</p>
+            <p>Continent Size: 11.7 million square miles</p>
+            <p>Largest country by size: Algeria - 919,600 square miles</p>
+            <p>Largest country by population: Nigeria - 237.5 million people</p>
+            <p>Largest city by size: Khartoum, Sudan - 8549 square miles</p>
+            <p>Largest city by population: Cairo, Egypt - 23 million people</p>
+          </div>
+          <div class="stats-card" id="asia-card">
+            <h2>Asia</h2>
+            <p>Total population: 4.8 billion people</p>
+            <p>Countries: 48 countries</p>
+            <p>Continent Size: 17.2 million square miles</p>
+            <p>Largest country by size: Russia - 6.6 million square miles</p>
+            <p>Largest country by population: China - 1.4 billion people</p>
+            <p>Largest city by size: Chongqing, China - 31,816 square miles</p>
+            <p>Largest city by population: Tokyo, Japan - 37 million people</p>
+          </div>
+          <div class="stats-card" id="australia-card">
+            <h2>Australia</h2>
+            <p>Total population: 27.2 million people</p>
+            <p>Countries: 1 country</p>
+            <p>Continent Size: 3 million square miles</p>
+            <p>Largest country by size: Australia - 3 million square miles</p>
+            <p>
+              Largest country by population: Australia - 27.2 million people
+            </p>
+            <p>Largest city by size: Brisbane, Australia - 6110 square miles</p>
+            <p>
+              Largest city by population: Sydney, Australia - 5.6 million people
+            </p>
+          </div>
+          <div class="stats-card" id="antarctica-card">
+            <h2>Antarctica</h2>
+            <p>Total population: 0 people</p>
+            <p>Countries: 0 countries</p>
+            <p>Continent Size: 5.3 million square miles</p>
+            <p>Largest country by size: N/A</p>
+            <p>Largest country by population: N/A</p>
+            <p>Largest city by size: N/A</p>
+            <p>Largest city by population: N/A</p>
+          </div>
+        </div>
+      </div>
 
       <div class="section-title">
-      <h2>Country Stats</h2>
-      <h4>Each graph contains info about the leading countries in different categories</h4>
+        <h2>Country Stats</h2>
+        <h4>
+          Each graph contains info about the leading countries in different
+          categories
+        </h4>
       </div>
-<section id="charts">
-  <div id="barcharts">
-    <canvas id="areaBarChart"></canvas>
-    <canvas id="populationBarChart"></canvas>
-    <canvas id="highPopulationDensityBarChart"></canvas>
-    <canvas id="oldestPopulationBarChart"></canvas>
-  </div>
-  <div id="timelinediv">
-    <canvas id="timeline"></canvas>
-  </div>
-</section>
+      <section id="charts">
+        <div id="barcharts">
+          <canvas id="areaBarChart"></canvas>
+          <canvas id="populationBarChart"></canvas>
+          <canvas id="highPopulationDensityBarChart"></canvas>
+          <canvas id="oldestPopulationBarChart"></canvas>
+        </div>
+        <div id="timelinediv">
+          <canvas id="timeline"></canvas>
+        </div>
+      </section>
 
-<div class="section-title">
-      <h2>Natural Features</h2>
-      <h4>Hover over each card to learn more about the natural feature</h4>
-      </div>
-
-<section id="cards">
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>Rivers</h3>
-        </div>
-        <div class="flip-card-back">
-          <p>Longest: Nile - 4,132 miles</p>
-          <p>Widest: Amazon - 30 miles</p>
-          <p>Deepest: Congo - 720 feet</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>Lakes</h3>
-        </div>
-        <div class="flip-card-back">
-          <p>Largest: Caspian Sea - 150,000 square miles</p>
-          <p>Deepest: Lake Baikal - 5,387 feet</p>
-          <p>Highest Elevation: Ojos del Salado Crater Lake - 20,965 feet</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>Mountains</h3>
-        </div>
-        <div class="flip-card-back">
-          <p>Tallest: Everest - 29,032 feet</p>
-          <p>Longest Mountain Range: Andes - 4,300 miles</p>
-          <p>Tallest Mountain Range: Himalayas - 20,000 feet average elevation</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>Volcanoes</h3>
-        </div>
-        <div class="flip-card-back">
-          <p>Tallest: Mauna Kea - 33,500 feet(13,803 feet above sea level)</p>
-          <p>Most Active: Kilauea - Erupting since 1983</p>
-          <p>Country With Most Volcanoes: United States - 173</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>Rainforests</h3>
-        </div>
-        <div class="flip-card-back">
-          <p>Largest: Amazon - 2.1 million square miles</p>
-          <p>Rainiest: Choco - 42 feet per year</p>
-          <p>Most Diversity: Amazon - 3 million+ species</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="flip-card">
-      <div class="flip-card-inner">
-        <div class="flip-card-front">
-          <h3>Deserts</h3>
-        </div>
-        <div class="flip-card-back">
-          <p>Largest: Antarctica - 5.3 million square miles</p>
-          <p>Hottest: Death Valley - 134F</p>
-          <p>Sunniest: Atacama - 80% of days are sunny and cleara</p>
-        </div>
-      </div>
-    </div>
-</section>
-
-
-<div class="section-title">
-      <h2>Ocean Scroll</h2>
-      <h4>Keep scrolling down to see just how deep the ocean really is. Scale - 1 foot = 5 pixels</h4>
+      <div class="section-title">
+        <h2>Natural Features</h2>
+        <h4>Hover over each card to learn more about the natural feature</h4>
       </div>
 
+      <section id="cards">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Rivers</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Longest: Nile - 4,132 miles</p>
+              <p>Widest: Amazon - 30 miles</p>
+              <p>Deepest: Congo - 720 feet</p>
+            </div>
+          </div>
+        </div>
 
-<section id="ocean-scroll">
-  <div class="zone" style="top: 131px">
-    <div class="line"></div>
-    <p class="line-text">End of Sunlight Zone. Beginning of Twilight Zone. 656 feet</p>
-  </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Lakes</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Largest: Caspian Sea - 150,000 square miles</p>
+              <p>Deepest: Lake Baikal - 5,387 feet</p>
+              <p>
+                Highest Elevation: Ojos del Salado Crater Lake - 20,965 feet
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <div class="landmark" style="top: 320px">
-    <div class="line"></div>
-    <p class="line-text">Average depth of Blue Whales. 1,600 feet</p>
-  </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Mountains</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Tallest: Everest - 29,032 feet</p>
+              <p>Longest Mountain Range: Andes - 4,300 miles</p>
+              <p>
+                Tallest Mountain Range: Himalayas - 20,000 feet average
+                elevation
+              </p>
+            </div>
+          </div>
+        </div>
 
-  <div class="landmark" style="top: 500px">
-    <div class="line"></div>
-    <p class="line-text">Average depth of Giant Squids. 2,500 feet</p>
-  </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Volcanoes</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>
+                Tallest: Mauna Kea - 33,500 feet(13,803 feet above sea level)
+              </p>
+              <p>Most Active: Kilauea - Erupting since 1983</p>
+              <p>Country With Most Volcanoes: United States - 173</p>
+            </div>
+          </div>
+        </div>
 
-  <div class="zone" style="top: 656px">
-    <div class="line"></div>
-    <p class="line-text">End of Twilight Zone. Beginning of Midnight Zone. 3,280 feet</p>
-  </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Rainforests</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Largest: Amazon - 2.1 million square miles</p>
+              <p>Rainiest: Choco - 42 feet per year</p>
+              <p>Most Diversity: Amazon - 3 million+ species</p>
+            </div>
+          </div>
+        </div>
 
-  <div class="landmark" style="top: 1680px">
-    <div class="line"></div>
-    <p class="line-text">Depth of USS Thresher. 8,400 feet</p>
-  </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <h3>Deserts</h3>
+            </div>
+            <div class="flip-card-back">
+              <p>Largest: Antarctica - 5.3 million square miles</p>
+              <p>Hottest: Death Valley - 134F</p>
+              <p>Sunniest: Atacama - 80% of days are sunny and cleara</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <div class="landmark" style="top: 2500px">
-    <div class="line"></div>
-    <p class="line-text">Depth of Titanic. 12,500 feet</p>
-  </div>
+      <div class="section-title">
+        <h2>Ocean Scroll</h2>
+        <h4>
+          Keep scrolling down to see just how deep the ocean really is. Scale -
+          1 foot = 5 pixels
+        </h4>
+      </div>
 
-  <div class="zone" style="top: 2625px">
-    <div class="line"></div>
-    <p class="line-text">End of Midnight Zone. Beginning of Abyssal Zone. 13,123 feet</p>
-  </div>
+      <section id="ocean-scroll">
+        <div class="zone" style="top: 131px">
+          <div class="line"></div>
+          <p class="line-text">
+            End of Sunlight Zone. Beginning of Twilight Zone. 656 feet
+          </p>
+        </div>
 
-  <div class="landmark" style="top: 3140px">
-    <div class="line"></div>
-    <p class="line-text">Depth of Bismarck. 15,700 feet</p>
-  </div>
+        <div class="landmark" style="top: 320px">
+          <div class="line"></div>
+          <p class="line-text">Average depth of Blue Whales. 1,600 feet</p>
+        </div>
 
-  <div class="landmark" style="top:3624px">
-    <div class="line"></div>
-    <p class="line-text">Molloy Deep - deepest part of Arctic Ocean. 18,210 feet</p>
-  </div>
+        <div class="landmark" style="top: 500px">
+          <div class="line"></div>
+          <p class="line-text">Average depth of Giant Squids. 2,500 feet</p>
+        </div>
 
-  <div class="zone" style="top:3937px">
-    <div class="line"></div>
-    <p class="line-text">End of Abyssal Zone. Beginning of Hadal Zone. 19,685 feet</p>
-  </div>
+        <div class="zone" style="top: 656px">
+          <div class="line"></div>
+          <p class="line-text">
+            End of Twilight Zone. Beginning of Midnight Zone. 3,280 feet
+          </p>
+        </div>
 
-  <div class="landmark" style="top:4874px">
-    <div class="line"></div>
-    <p class="line-text">South Sanwich Trech - deepest part of Southern Ocean. 24,390 feet</p>
-  </div>
+        <div class="landmark" style="top: 1680px">
+          <div class="line"></div>
+          <p class="line-text">Depth of USS Thresher. 8,400 feet</p>
+        </div>
 
-  <div class="landmark" style="top:5069px">
-    <div class="line"></div>
-    <p class="line-text">Java Trech - deepest part of Indian Ocean. 25,344 feet</p>
-  </div>
+        <div class="landmark" style="top: 2500px">
+          <div class="line"></div>
+          <p class="line-text">Depth of Titanic. 12,500 feet</p>
+        </div>
 
-  <div class="landmark" style="top:5496px">
-    <div class="line"></div>
-    <p class="line-text">Puerto Rico Trech - deepest part of Atlantic Ocean. 27,480 feet</p>
-  </div>
+        <div class="zone" style="top: 2625px">
+          <div class="line"></div>
+          <p class="line-text">
+            End of Midnight Zone. Beginning of Abyssal Zone. 13,123 feet
+          </p>
+        </div>
 
-  <div class="zone" style="top:7154px">
-    <div class="line"></div>
-    <p class="line-text">End of Hadal Zone. You have reached the deepest known part of the ocean - Challenger Deep in the Mariana Trench in the Pacific Ocean. 36,070 feet</p>
-  </div>
-</section>
-</main>
-        <script src="earthstats.js"></script>
-    </body>
+        <div class="landmark" style="top: 3140px">
+          <div class="line"></div>
+          <p class="line-text">Depth of Bismarck. 15,700 feet</p>
+        </div>
+
+        <div class="landmark" style="top:3624px">
+          <div class="line"></div>
+          <p class="line-text">
+            Molloy Deep - deepest part of Arctic Ocean. 18,210 feet
+          </p>
+        </div>
+
+        <div class="zone" style="top:3937px">
+          <div class="line"></div>
+          <p class="line-text">
+            End of Abyssal Zone. Beginning of Hadal Zone. 19,685 feet
+          </p>
+        </div>
+
+        <div class="landmark" style="top:4874px">
+          <div class="line"></div>
+          <p class="line-text">
+            South Sanwich Trech - deepest part of Southern Ocean. 24,390 feet
+          </p>
+        </div>
+
+        <div class="landmark" style="top:5069px">
+          <div class="line"></div>
+          <p class="line-text">
+            Java Trech - deepest part of Indian Ocean. 25,344 feet
+          </p>
+        </div>
+
+        <div class="landmark" style="top:5496px">
+          <div class="line"></div>
+          <p class="line-text">
+            Puerto Rico Trech - deepest part of Atlantic Ocean. 27,480 feet
+          </p>
+        </div>
+
+        <div class="zone" style="top:7154px">
+          <div class="line"></div>
+          <p class="line-text">
+            End of Hadal Zone. You have reached the deepest known part of the
+            ocean - Challenger Deep in the Mariana Trench in the Pacific Ocean.
+            36,070 feet
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="earthstats.js"></script>
+  </body>
 </html>

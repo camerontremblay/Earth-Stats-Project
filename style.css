@@ -1,4 +1,5 @@
-html, body{
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -18,10 +19,10 @@ html, body{
   position: relative;
 }
 
-#world-map{
-    width: 100%;
-    height: auto;
-    display: block;
+#world-map {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .info-container {
@@ -41,7 +42,7 @@ html, body{
   transition: opacity 0.3s ease;
 }
 
-#cards{
+#cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
@@ -86,7 +87,7 @@ html, body{
 }
 
 
-#ocean-scroll{
+#ocean-scroll {
   position: relative;
   height: 7214px;
   width: 100vw;
@@ -99,23 +100,24 @@ html, body{
   margin-top: 30px;
 }
 
-.zone, .landmark{
+.zone,
+.landmark {
   position: absolute;
   width: 100%;
   text-align: center;
   color: yellow;
 }
 
-.line{
+.line {
   border-bottom: 2px solid yellow;
   width: 100%;
 }
 
-.line-text{
+.line-text {
   margin-top: 5px;
 }
 
-#barcharts{
+#barcharts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
@@ -123,31 +125,31 @@ html, body{
   padding-right: 10px;
 }
 
-#barcharts canvas{
+#barcharts canvas {
   width: 100% !important;
   height: 400px !important;
   display: block;
 }
 
-#timelinediv{
+#timelinediv {
   padding-left: 10px;
   padding-right: 10px;
 }
 
-#timelinediv canvas{
+#timelinediv canvas {
   width: 100% !important;
   height: auto !important;
   display: block;
 }
 
-#page-title{
+#page-title {
   text-align: center;
 }
 
-.section-title{
+.section-title {
   text-align: center;
 }
 
-#charts{
+#charts {
   background-color: #57D6F0;
 }
